@@ -23,26 +23,44 @@ class Pasien extends Model
 
     public function rekamMedis()
     {
-        return $this->hasMany(\App\Models\RekamMedis::class);
+        return $this->hasMany(RekamMedis::class);
     }
 
     public function perawatans()
-    {
-        return $this->hasManyThrough(
-            \App\Models\Perawatan::class,   // model tujuan
-            \App\Models\RekamMedis::class,  // model perantara
-            'pasien_id',                    // foreign key di rekam_medis
-            'rekam_medis_id',               // foreign key di perawatans
-            'id',                           // local key di pasiens
-            'id'                            // local key di rekam_medis
-        );
-    }
-
-    public function rekamMedisTerakhir()
-    {
-      return $this->hasOne(RekamMedis::class)->latestOfMany();
-    }
-
-
+{
+    return $this->hasManyThrough(
+        Perawatan::class,
+        RekamMedis::class,
+        'pasien_id',
+        'rekam_medis_id',
+        'id',
+        'id'
+    );
 }
 
+// Perawatan terbaru (tanpa latestOfMany)
+public function latestPerawatan()
+{
+    return $this->perawatans()->orderByDesc('id')->first();
+}
+
+
+    // AMBIL REKAM MEDIS TERBARU (INI BOLEH latestOfMany)
+    public function rekamMedisTerbaru()
+    {
+        return $this->hasOne(RekamMedis::class)->latestOfMany();
+    }
+
+    // AMBIL REKAM MEDIS TERAKHIR (alias saja)
+    public function rekamMedisTerakhir()
+    {
+        return $this->hasOne(RekamMedis::class)->latestOfMany();
+    }
+    
+
+    // AMBIL PERAWATAN TERAKHIR (manual, TIDAK PAKAI latestOfMany)
+    // public function latestPerawatan()
+    // {
+    //     return $this->perawatans()->orderByDesc('id')->first(); // ✔ cara yang benar
+    // }
+}

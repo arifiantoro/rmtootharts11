@@ -13,6 +13,7 @@
         <li class="nav-item"><a class="nav-link text-dark" href="{{ route('pasien.index') }}"><i class="material-symbols-rounded opacity-5">groups</i><span class="nav-link-text ms-1">Pasien</span></a></li>
         <li class="nav-item"><a class="nav-link text-dark" href="{{ route('rekammedis.index') }}"><i class="material-symbols-rounded opacity-5">receipt_long</i><span class="nav-link-text ms-1">Rekam Medis</span></a></li>
         <li class="nav-item"><a class="nav-link text-dark" href="/reminder"><i class="material-symbols-rounded opacity-5">alarm</i><span class="nav-link-text ms-1">Reminder</span></a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="/follow-up"><i class="material-symbols-rounded opacity-5">outgoing_mail</i><span class="nav-link-text ms-1">Follow Up</span></a></li>
         <li class="nav-item"><a class="nav-link text-dark" href="/pos"><i class="material-symbols-rounded opacity-5">view_in_ar</i><span class="nav-link-text ms-1">POS</span></a></li>
         <li class="nav-item"><a class="nav-link text-dark" href="/"><i class="material-symbols-rounded opacity-5">table_view</i><span class="nav-link-text ms-1">Keuangan</span></a></li>
         <li class="nav-item mt-3"><h6 class="ps-4 ms-2 text-uppercase text-xs text-dark font-weight-bolder opacity-5">Account pages</h6></li>

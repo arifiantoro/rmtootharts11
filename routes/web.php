@@ -11,7 +11,8 @@ use App\Http\Controllers\{
     ReminderController,
     TransaksiKeuanganController,
     OdontogramController,
-    StokBarangController
+    StokBarangController,
+    FollowUpController
 };
 
 // =======================
@@ -81,3 +82,9 @@ Route::prefix('odontogram')->group(function () {
 Route::get('/reminder', [ReminderController::class, 'index'])->name('reminder.index');
 Route::resource('stok-barang', StokBarangController::class);
 Route::resource('transaksi-keuangan', TransaksiKeuanganController::class);
+
+// =======================
+// 🔹 Follow Up
+// =======================
+Route::get('/follow-up', [FollowUpController::class, 'index'])
+    ->name('followup.index');
