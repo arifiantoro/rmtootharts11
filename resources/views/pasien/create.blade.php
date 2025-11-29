@@ -34,7 +34,7 @@
                         <label class="form-label">Jenis Pasien</label>
                         <select name="jenis_pasien" class="form-control" required>
                             <option value="Ortho">Ortho</option>
-                            <option value="Bukan Ortho">Umum</option>
+                            <option value="Umum">Umum</option>
                         </select>
                     </div>
 

@@ -198,15 +198,15 @@
 
 <style>
 .tooth {
-    width: 28px;
-    height: 28px;
+    width: 35px;
+    height: 35px;
     border: 1px solid #000;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 10px;
-    border-radius: 4px;
+    font-size: 12px;
+    border-radius: 6px;
     user-select: none;
     transition: all 0.2s ease;
 }

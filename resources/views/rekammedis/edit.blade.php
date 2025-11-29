@@ -209,16 +209,16 @@
 .tooth { width: 35px; height: 35px; border: 1px solid #ccc; border-radius: 6px; text-align: center; line-height: 35px; cursor: pointer; font-size: 12px; }
 .tooth:hover { background: #f0f8ff; }
 .karies { background-color: #f87171 !important; }
-.hilang { background-color: #9ca3af !important; }
-.belum-erupsi { background-color: #60a5fa !important; }
-.karang-gigi { background-color: #facc15 !important; }
-.sisa-akar { background-color: #a78bfa !important; }
+.hilang { background-color: #34495e !important; }
+.belum-erupsi { background-color: #f1c40f !important; }
+.karang-gigi { background-color: #27ae60 !important; }
+.sisa-akar { background-color: #8e44ad !important; }
 .legend { display:inline-block;width:18px;height:18px;border-radius:4px;margin-right:5px; }
 .legend.karies {background-color:#f87171;}
-.legend.hilang {background-color:#9ca3af;}
-.legend.belum-erupsi {background-color:#60a5fa;}
-.legend.karang-gigi {background-color:#facc15;}
-.legend.sisa-akar {background-color:#a78bfa;}
+.legend.hilang {background-color:#34495e;}
+.legend.belum-erupsi {background-color:#f1c40f;}
+.legend.karang-gigi {background-color:#27ae60;}
+.legend.sisa-akar {background-color:#8e44ad;}
 </style>
 
 @push('scripts')
